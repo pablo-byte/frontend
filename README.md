@@ -4,18 +4,17 @@ Aplicación React con Redux para la gestión de posts.
 
 ## Características
 
-- ✅ Insertar posts (nombre y descripción)
-- ✅ Eliminar posts
-- ✅ Listar posts
-- ✅ Filtrar posts por nombre (localmente)
-- ✅ Redux para manejo de estado
-- ✅ Interfaz moderna y responsive
+- Insertar posts (name y description)
+- Eliminar posts
+- Listar posts
+- Filtrar posts por noname
+- Redux para manejo de estado
 
 ## Requisitos Previos
 
 - Node.js (versión 16 o superior)
 - npm o yarn
-- Backend API corriendo (por defecto en `http://localhost:3000/api`)
+- Backend API corriendo (por defecto en `http://localhost:4000/api`)
 
 ## Instalación
 
@@ -24,8 +23,17 @@ Aplicación React con Redux para la gestión de posts.
 npm install
 ```
 
-2. Configurar la URL del backend (opcional):
-   - Editar `src/services/api.js` y cambiar `API_BASE_URL` si tu backend está en otra URL
+2. Configurar las variables de entorno:
+```bash
+cp .env.example .env
+```
+   
+   Editar el archivo `.env` y configurar la URL de tu backend:
+```env
+VITE_API_BASE_URL=http://localhost:4000/api
+```
+
+   **Nota:** En Vite, las variables de entorno deben comenzar con `VITE_` para ser expuestas al cliente.
 
 ## Ejecutar la Aplicación
 
